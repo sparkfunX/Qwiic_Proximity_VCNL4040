@@ -6,3 +6,4 @@ silkscreen color, White
 oz copper, 1oz
 finish, HASL lead free
 stencils, top+bottom
+pcs per panel, 9

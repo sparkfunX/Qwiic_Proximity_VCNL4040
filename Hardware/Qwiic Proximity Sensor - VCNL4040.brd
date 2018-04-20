@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="9.0.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
@@ -15,10 +16,10 @@
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="21" name="tPlace" color="16" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="14" fill="1" visible="no" active="yes"/>
+<layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
@@ -38,13 +39,13 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="yes"/>
-<layer number="51" name="tDocu" color="6" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
@@ -145,8 +146,8 @@
 <layer number="229" name="229bmp" color="7" fill="1" visible="no" active="no"/>
 <layer number="230" name="230bmp" color="7" fill="1" visible="no" active="no"/>
 <layer number="231" name="231bmp" color="7" fill="1" visible="no" active="no"/>
-<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="no" active="yes"/>
-<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="no" active="yes"/>
+<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="no" active="no"/>
+<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="no" active="no"/>
 <layer number="248" name="Housing" color="7" fill="1" visible="no" active="no"/>
 <layer number="249" name="Edge" color="7" fill="1" visible="no" active="no"/>
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
@@ -3801,10 +3802,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
-<param name="checkGrid" value="0"/>
 <param name="checkAngle" value="1"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
+<param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -3954,8 +3956,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <element name="U$13" library="buzzard_labels (3)" package="VCNL40400" value="" x="8.128" y="19.431"/>
 <element name="U$14" library="buzzard_labels (3)" package="VCNL40401" value="" x="18.415" y="11.811" rot="MR0"/>
 <element name="C1" library="SparkFun-Capacitors" package="0603" value="2.2uF" x="17.78" y="12.7" smashed="yes" rot="R270">
-<attribute name="PROD_ID" value="CAP-07888" x="26.67" y="12.7" size="1.778" layer="27" font="vector" ratio="15" rot="R270" display="off"/>
 <attribute name="NAME" x="18.542" y="12.7" size="0.6096" layer="25" font="vector" ratio="20" rot="R270" align="bottom-center"/>
+<attribute name="PROD_ID" value="CAP-07888" x="26.67" y="12.7" size="1.778" layer="27" font="vector" ratio="15" rot="R270" display="off"/>
 <attribute name="VALUE" x="17.018" y="12.7" size="0.6096" layer="27" font="vector" ratio="20" rot="R270" align="top-center"/>
 </element>
 <element name="C4" library="SparkFun-Capacitors" package="0603" value="0.1uF" x="12.7" y="10.16" rot="R180">
@@ -4173,45 +4175,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="12.573" y1="12.446" x2="13.716" y2="12.446" width="0.1524" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="19,16,6edf619242eba664"/>
-<approved hash="19,16,27e860757b85001f"/>
-<approved hash="19,16,b7194a6b63867536"/>
-<approved hash="19,16,ae32a3ed2f1126cb"/>
-<approved hash="19,16,509ce7ab2a57c9e5"/>
-<approved hash="19,16,509ce7ab2a57c9e5"/>
-<approved hash="19,16,630b96f5bdfbfe70"/>
-<approved hash="19,16,8fba7e630ec27d74"/>
-<approved hash="19,16,8fba7e630ec27d74"/>
-<approved hash="19,1,b1e3b1726749692d"/>
-<approved hash="5,1,d61399d2feb43d3a"/>
-<approved hash="5,1,8e31c611c2644a41"/>
-<approved hash="19,16,4adf459f4de6a964"/>
-<approved hash="19,16,11fdf63f6715aaec"/>
-<approved hash="19,16,e8e5e5754d857c12"/>
-<approved hash="19,16,5f18a266108b0637"/>
-<approved hash="19,16,2bd02eb791af6936"/>
-<approved hash="19,16,17674963a0221514"/>
-<approved hash="19,16,5a84516e4e5945b3"/>
-<approved hash="19,16,1968abdda000f987"/>
-<approved hash="19,16,3a84296e365925b3"/>
-<approved hash="19,16,3a84296e365925b3"/>
-<approved hash="19,16,d6e1d5ab5655ed98"/>
-<approved hash="19,16,66b14d29b160a267"/>
-<approved hash="19,16,3a84296e365925b3"/>
-<approved hash="19,16,3a84296e365925b3"/>
-<approved hash="19,16,6f673166d6276314"/>
-<approved hash="19,16,6f673166d6276314"/>
-<approved hash="19,16,8a84096e165895b2"/>
-<approved hash="19,16,8a84096e165895b2"/>
-<approved hash="19,16,5168e3a1627c3b87"/>
-<approved hash="19,16,20286a84f5945c7e"/>
-<approved hash="19,16,8a84096e165895b2"/>
-<approved hash="19,16,30b4372bd5605e62"/>
-<approved hash="19,16,5168e3a1627c3b87"/>
-<approved hash="19,16,20286a84f5945c7e"/>
-<approved hash="19,16,30b4372bd5605e62"/>
-</errors>
 </board>
 </drawing>
 </eagle>
