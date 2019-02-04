@@ -8,7 +8,7 @@ SparkFun VCNL4040 Proximity Sensor (Qwiic) - VCNL4040
 The VCNL4040 is a simple IR presence and ambient light sensor. This sensor is excellent for detecting if something has appeared in front of the sensor. We often see this type of sensor on automatic towel dispensers, automatic faucets, etc. You can detect objects qualitatively up to 20cm away. This means you can detect if something is there, and if it is closer or further away since the last reading, but it's difficult to say it is 7.2cm away. If you need quantitative distance readings (for example sensing that an object is 177mm away) check out the SparkFun Time of Flight (ToF) sensors with mm accuracy.
 
 SparkFun labored with love to create this code. Feel like supporting open source hardware? 
-Buy a [breakout board](https://www.sparkfun.com/products/14688) from SparkFun!
+Buy a [breakout board](https://www.sparkfun.com/products/14690) from SparkFun!
 
 Repository Contents
 -------------------
@@ -18,7 +18,7 @@ Repository Contents
 
 Library
 --------------
-* **[Arduino Library](https://github.com/sparkfun/SparkFun_MS5637_Arduino_Library)** - Library for reading pressure in mBar, altitude, etc.
+* **[Arduino Library](https://github.com/sparkfun/SparkFun_VCNL4040_Arduino_Library)** - Library for reading pressure in mBar, altitude, etc.
 
 License Information
 -------------------
